@@ -1,0 +1,35 @@
+{
+  "name": "study-capture",
+  "version": "0.1.0",
+  "description": "Capture school materials, classify them by subject and material type, preserve originals, and create compact study indexes.",
+  "author": {
+    "name": "innollia",
+    "url": "https://github.com/innollia"
+  },
+  "repository": "https://github.com/innollia/skill",
+  "license": "MIT",
+  "keywords": [
+    "study",
+    "school",
+    "handout",
+    "assignment",
+    "exam"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Study Capture",
+    "shortDescription": "Route school materials into a clean subject-based archive",
+    "longDescription": "Preserve original school materials, infer subject and material type, extract study-critical metadata, and maintain a lightweight index without bloating context.",
+    "developerName": "innollia",
+    "category": "Education",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "이거 공부자료로 저장해줘.",
+      "이 유인물 과목이랑 유형 분류해서 넣어줘.",
+      "이 자료에서 시험범위나 수행평가 조건만 뽑아서 저장해줘."
+    ]
+  }
+}
