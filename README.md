@@ -2,7 +2,9 @@
 
 Personal Codex plugin marketplace.
 
-## Context Capsule
+## Plugins
+
+### Context Capsule
 
 `context-capsule` turns the active task into a very small handoff capsule for a fresh chat.
 
@@ -15,6 +17,52 @@ Design goals:
 - preserve decisions, blockers, next actions, and opaque identifiers
 - no preface or trailing commentary
 
+Example prompts:
+
+- `캡슐 만들어줘`
+- `인계 캡슐`
+- `Create a context capsule for this chat.`
+
+### Thought Scrapbook
+
+`thought-scrapbook` captures raw ideas without polishing them away.
+
+Design goals:
+
+- raw wording is immutable
+- refinement is always stored separately
+- promoted writing stays distinct from raw scraps
+- idea links are stored without rewriting source entries
+- explicit capture only, never auto-save ordinary conversation
+
+Default storage root: `~/thought-scrapbook/`
+
+Example prompts:
+
+- `이거 글감. 원문 그대로 스크랩해줘.`
+- `이 생각 저장해줘.`
+- `이 스크랩 정제해. 원문은 건드리지 마.`
+
+### Study Capture
+
+`study-capture` preserves school materials and routes them into a compact subject-based archive.
+
+Design goals:
+
+- original source files remain canonical
+- classify by subject and material type
+- extract only study-critical metadata
+- keep one lightweight retrieval index
+- exact wording is preserved for rubrics, ranges, deadlines, and submission conditions
+
+Default storage root: `~/study-capture/`
+
+Example prompts:
+
+- `이거 공부자료로 저장해줘.`
+- `이 유인물 과목이랑 유형 분류해서 넣어줘.`
+- `시험범위랑 수행평가 조건만 뽑아서 저장해줘.`
+
 ## Add this marketplace in Codex
 
 Use the plugin marketplace source dialog with:
@@ -23,16 +71,9 @@ Use the plugin marketplace source dialog with:
 - Git ref: `main`
 - Sparse path: leave blank
 
-The repository marketplace manifest is at `.agents/plugins/marketplace.json` and points to `./plugins/context-capsule`.
+The repository marketplace manifest is at `.agents/plugins/marketplace.json`.
 
-After adding the marketplace, install **Context Capsule** and start a new Codex thread before testing it.
-
-Example prompts:
-
-- `캡슐 만들어줘`
-- `인계 캡슐`
-- `Create a context capsule for this chat.`
-- `Compress this work so I can continue in a new chat.`
+After adding the marketplace, install the plugin you want and start a new Codex thread before testing newly installed or updated skills.
 
 ## Repository layout
 
@@ -41,7 +82,11 @@ Example prompts:
 plugins/
   context-capsule/
     .codex-plugin/plugin.json
-    skills/
-      context-capsule/
-        SKILL.md
+    skills/context-capsule/SKILL.md
+  thought-scrapbook/
+    .codex-plugin/plugin.json
+    skills/thought-scrapbook/SKILL.md
+  study-capture/
+    .codex-plugin/plugin.json
+    skills/study-capture/SKILL.md
 ```
