@@ -1,6 +1,11 @@
 ---
 name: context-capsule
-description: Create an aggressively compact handoff capsule for continuing the active task in a fresh chat. Use when the user asks for a context capsule, capsule, 인계 캡슐, 대화 인계, handoff, chat transfer, or asks to carry the current work into another conversation. The capsule is not a conversation summary: preserve only the minimum state required to resume correctly.
+description: >-
+  Create an aggressively compact handoff capsule for continuing the active task
+  in a fresh chat. Use when the user asks for a context capsule, capsule,
+  인계 캡슐, 대화 인계, handoff, chat transfer, or asks to carry the current work
+  into another conversation. The capsule is not a conversation summary; preserve
+  only the minimum state required to resume correctly.
 ---
 
 # Context Capsule
