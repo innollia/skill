@@ -1,0 +1,34 @@
+{
+  "name": "eve-gpt-image",
+  "version": "0.1.0",
+  "description": "Compile Eve scene and Notion canon into native ChatGPT image generation while preserving identity, source precedence, and Scene Runtime boundaries.",
+  "author": {
+    "name": "innollia",
+    "url": "https://github.com/innollia"
+  },
+  "repository": "https://github.com/innollia/skill",
+  "license": "MIT",
+  "keywords": [
+    "eve",
+    "image",
+    "illustration",
+    "chatgpt",
+    "scene-runtime"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Eve GPT Image",
+    "shortDescription": "Render Eve scenes with ChatGPT image generation",
+    "longDescription": "Read the minimum Eve canon and current scene state, compile the scene with the existing CompiledIllustrationV1 semantics, and render it with the host's native ChatGPT image generator instead of the runtime's Higgsfield provider.",
+    "developerName": "innollia",
+    "category": "Creative",
+    "capabilities": [
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "이브 지금 장면 GPT로 그려줘.",
+      "이브 이미지 만들어줘.",
+      "Render the current Eve scene with ChatGPT image generation."
+    ]
+  }
+}
