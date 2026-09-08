@@ -63,6 +63,26 @@ Example prompts:
 - `이 유인물 과목이랑 유형 분류해서 넣어줘.`
 - `시험범위랑 수행평가 조건만 뽑아서 저장해줘.`
 
+### Eve GPT Image
+
+`eve-gpt-image` compiles the current Eve scene and live visual canon into the host's native ChatGPT image generator.
+
+Design goals:
+
+- reuse Eve `27A` / `CompiledIllustrationV1` scene semantics
+- user-specified new scene outranks the active scene; active scene outranks current-state fallback
+- preserve a supplied Eve reference image as the identity source
+- keep Eve and user-character reference slots separate
+- never substitute Higgsfield or reuse Higgsfield Element IDs as GPT bindings
+- never fabricate Runtime `scene_id`, `source_turn_key`, generation IDs, or image URLs
+- register a rendered image with Scene Runtime only when an exact resolvable asset reference really exists
+
+Example prompts:
+
+- `이브 지금 장면 GPT로 그려줘.`
+- `이브 이미지 만들어줘.`
+- `Render the current Eve scene with ChatGPT image generation.`
+
 ## Add this marketplace in Codex
 
 Use the plugin marketplace source dialog with:
@@ -89,4 +109,7 @@ plugins/
   study-capture/
     .codex-plugin/plugin.json
     skills/study-capture/SKILL.md
+  eve-gpt-image/
+    .codex-plugin/plugin.json
+    skills/eve-gpt-image/SKILL.md
 ```
